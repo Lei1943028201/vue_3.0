@@ -1,0 +1,85 @@
+/* 可以设置不同的进入和离开动画   */
+/* 设置持续时间和动画函数        */
+
+.fade-enter-active {
+	transition: all .618s;
+}
+
+.fade-enter-from {
+	opacity: 0;
+
+}
+
+.fade-enter-to {
+	opacity: 1;
+}
+
+.fade-leave-active {
+	transition: all .618s;
+}
+
+.fade-leave-from {
+	transform: translateY(0%);
+}
+
+.fade-leave-to {
+	transform: translateY(-100%);
+}
+
+.into-left-enter-active{
+	animation: intoLeft 1s;
+}
+.into-left-leave-active{
+	animation: intoLeft 1s;
+}
+
+
+@keyframes intoLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes intoBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes intoRight {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+
+
+.bounce-enter-active {
+	animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+	animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
